@@ -125,3 +125,11 @@ def on_page_markdown(markdown, page, config, files):
             if url is None:
                 return m.group(0)
             return f'{mark}[{label}]({url})'
+        fragment = re.sub(
+            r'(!?)\[([^\]\n]+)\]\(([^)\n]+)\)',
+            markdown_link,
+            fragment,
+        )
+        return fragment
+
+    return convert(markdown)
