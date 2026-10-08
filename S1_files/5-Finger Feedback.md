@@ -1,0 +1,5 @@
+- Thumb: That was great
+- Index finger: I have reached these [[Goals]] 
+- Middle finger: I did not like ...
+- Ring finger: That's how it went for me
+- Pinky: That was to confusing
