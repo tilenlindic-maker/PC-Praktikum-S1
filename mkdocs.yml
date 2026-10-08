@@ -27,3 +27,34 @@ markdown_extensions:
 
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+
+  - Intro and Discussion (~30 Min):
+      - Goals: Goals.md
+      - S1 Questions: S1 Questions.md
+
+  - Linux Crash Course (~30 Min):
+      - General Information Linux: General Information Linux.md
+      - Basic Terminal Commands: Basic Terminal Commands.md
+
+  - Molecular Orbitals (~30 Min):
+      - Your First Single Point Calculation using Orca: Your First Single Point Calculation using Orca.md
+      - Visualize Molecules and Orbitals with Avogadro: AvogadroGuide.md
+
+  - Optimizing the Bond Length (~60 Min):
+      - Scan of the potential energy surface: Scan of the potential energy surface.md
+      - Geometry Optimization Exercise: Geometry Optimization Exercise.md
+      - Optimize the geometric structure using ORCA: Optimization of the geometric structure.md
+      - Preparing the Data Set for S2: Preparing the Data Set for S2.md
+
+  - Calculate the Dissociation Energy (~45 Min):
+      - Calculate the Dissociation Energy: Calculate the Dissociation Energy.md
+      - Zero Point Energy Correction: Calculate the Dissociation Energy including the Zero Point Energy Correction.md
+      - Calculate the Inner Dissociation Energy: Calculate the Inner Dissociation Energy.md
+
+  - Closing (~10 Min):
+      - 5-Finger Feedback: 5-Finger Feedback.md
+      - Feedback: Feedback.md
+      - Protocol Guide: Protocol Guide.md
