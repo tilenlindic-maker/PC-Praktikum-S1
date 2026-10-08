@@ -1,0 +1,10 @@
+site_name: PC Praktikum S1
+site_description: Quantum Chemistry on the Computer
+
+theme:
+  name: mkdocs
+
+docs_dir: S1_files
+
+plugins:
+  - search
