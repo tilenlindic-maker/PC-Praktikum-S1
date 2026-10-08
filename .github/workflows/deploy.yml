@@ -35,8 +35,10 @@ jobs:
         run: pip install "mkdocs-material==9.*"
 
       - name: Build website
-        run: mkdocs build
-
+        run: |
+          cp "S1_files/S1 Quantum Chemistry on the Computer.md" S1_files/index.md
+          mkdocs build
+          
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
