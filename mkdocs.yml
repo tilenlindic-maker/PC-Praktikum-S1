@@ -1,6 +1,8 @@
 site_name: PC Praktikum S1
 site_description: Quantum Chemistry on the Computer
 
+site_url: https://tilenlindic-maker.github.io/PC-Praktikum-S1/
+
 theme:
   name: mkdocs
 
