@@ -1,12 +1,19 @@
 site_name: PC Praktikum S1
 site_description: Quantum Chemistry on the Computer
-
 site_url: https://tilenlindic-maker.github.io/PC-Praktikum-S1/
 
-theme:
-  name: mkdocs
-
 docs_dir: S1_files
+
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: blue
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
 
 plugins:
   - search
