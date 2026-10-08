@@ -1,9 +1,7 @@
 
 ## Intro and Discussion (~30 Min)
-- [Goals](S1_files/Goals.md)
-- [QuantumChemistryOnTheComputer/S1_files/Goals.md)](Goals)
-
-- [S1\ Questions](S1\ Questions)
+- [Goals](Goals.md)
+- [S1 Questions](S1%20Questions.md)
 
 ## Linux Crash Course (~30 Min)
 - [General Information Linux](General Information Linux)
