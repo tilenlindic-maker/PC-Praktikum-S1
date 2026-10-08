@@ -70,14 +70,26 @@ def on_page_markdown(markdown, page, config, files):
 
     # Also convert old-style bare Markdown links: [Page](Page Name)
     # Already working URLs, anchors, and explicit .md links are left alone.
-    def replace_markdown_link(match):
-        prefix, title, target = match.groups()
-        if target.startswith(('http:', 'https:', 'mailto:', '#', '/', '../', './')):
-            return match.group(0)
-        if Path(target.split('#', 1)[0]).suffix:
-            return match.group(0)
-        dest = url_for(target)
-        return f'{prefix}[{title}]({dest})' if dest else match.group(0)
+def replace_markdown_link(match):
+    prefix, title, target = match.groups()
+
+    # Leave external URLs and anchors unchanged.
+    if target.startswith(
+        ('http:', 'https:', 'mailto:', '#', '/', '../', './')
+    ):
+        return match.group(0)
+
+    # Remove Markdown escape characters before spaces.
+    target = target.replace('\\ ', ' ')
+    title = title.replace('\\ ', ' ')
+
+    # Handle Obsidian aliases.
+    if '|' in target:
+        target, alias = target.split('|', 1)
+        title = alias
+
+    # Find the target among Markdown pages or attachments.
+    suffix = Path(target.split('#', 1)[0]).suffix.lower()
 
     markdown = re.sub(r'(?<!\!)((?:!)?)\[([^\]\n]+)\]\(([^)\n]+)\)', replace_markdown_link, markdown)
     return markdown
